@@ -1,2 +1,2 @@
 #for checking up darkhack server
-on
+off
