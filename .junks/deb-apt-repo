@@ -3,7 +3,7 @@
 import datetime, hashlib, os, re, shutil, subprocess, sys, glob, argparse
 
 COMPONENTS = []
-supported_arches = ['all', 'arm', 'i686', 'aarch64', 'x86_64', 'arm64']
+supported_arches = ['all', 'arm', 'i686', 'aarch64', 'x86_64', 'arm64', 'amd64']
 encountered_arches = set()
 hashes = ['md5', 'sha1', 'sha256', 'sha512']
 
