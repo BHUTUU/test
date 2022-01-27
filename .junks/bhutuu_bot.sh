@@ -164,8 +164,8 @@ while true; do
 	msg=$(jq -r .result[0].message.text <<<"$resp")
 	msgid=$(jq -r .result[0].message.message_id <<<"$resp")
 	name=$(jq -r .result[0].message.from.username <<<"$resp")
-        if [[ $name == null ]]; then
-		name=$(jq -r .result[0].message.from.first_name)
+  if [[ $name == null ]]; then
+		name=$(jq -r .result[0].message.from.first_name <<<"$resp")
 	fi
 	args=($(cut -sd" " -f2- <<<"$msg"))
 	chat=$(jq -r .result[0].message.chat.id <<<"$resp")
