@@ -1,0 +1,20 @@
+#!/bin/sh
+hide() {
+  echo -ne "\033[?25l\c"
+}
+show() {
+  echo -ne "\033[?12l\033[?25h"
+}
+hide
+proces=("/" "-" "\\" "|")
+m=" "
+l=0
+while (($l < 5)); do
+for i in ${proces[@]}; do
+  echo -ne "\rLoading....${m}${i} "
+  m+=" "
+  sleep 0.3
+done
+let l++
+done
+echo
