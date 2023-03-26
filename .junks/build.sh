@@ -5,6 +5,13 @@ APT REPOSITORY MANUFACTURER
 MADE WITH LOVE FOR EVERYONE JUST FOR FREE!
 '
 set -x    #for debug mode
+#Requrements:
+#TREE
+if ! hash tree >/dev/null 2>&1; then apt install tree -y; fi
+#gnupg
+if ! hash gpg> /dev/null 2>&1; then apt install gnupg -y; fi
+#<-x->
+
 CWD=$(pwd)
 DebPerm() {
   chmod 0755 $1/DEBIAN
