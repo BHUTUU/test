@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* height: 200vh; */
+  width: 100%;
+  /* padding: 0.3vw 4vw; */
+  overflow-y: scroll;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  background-color: #1a55a6;
+  display: flex;
+  /* gap: 20vw; */
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30vw;
+  padding-right: 1vw;
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 0.4vw;
+}
+header > p {
+  text-align: center;
+}
+.dth {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2px;
+}
+.dth > button {
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 0.4vw;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.dth > button:hover {
+  background-color: rgba(156, 154, 154, 0.829);
+}
+
+.sec {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.part1 {
+  background-color: #1a55a6;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.part1:hover {
+  background-color: #2274e8;
+}
+.part1 > p {
+  text-align: center;
+  padding: 10px 15px;
+  color: white;
+  font-size: 0.8rem;
+}
+.text1 {
+  color: red;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.text1 > span {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* ---------------------form box main------------------------------- */
+
+.main {
+  margin-top: 1vw;
+  width: 100%;
+}
+.elem {
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 2vw;
+  flex-direction: row;
+  /* background-color: red; */
+}
+.inerelem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  /* background-color: blue; */
+  width: 40%;
+}
+.inerelem > select {
+  width: 60%;
+  padding: 2px;
+}
+#selectElem2 > button {
+  padding: 5px 12px;
+  background-color: #1a55a6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+#add-elem1 {
+  display: none;
+}
+#add-elem2,
+#add-elem3 {
+  display: none;
+}
+#add-elem1,
+#add-elem2,
+#add-elem3 {
+  margin: auto;
+  /* border: 1px solid black; */
+  width: 70%;
+}
+#add-elem1 > h1 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+#add-elem2 > h1 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+#add-elem3 > h1 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.box {
+  /* border: 1px solid black; */
+  margin: auto;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  /* padding: 5px 10px; */
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.box-elem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.2vw;
+  margin-bottom: 0.2vw;
+}
+.box-elem > label > span {
+  color: red;
+}
+.box-elem-r {
+  width: 60%;
+}
+.box-elem-r > input {
+  width: 60%;
+}
+#btn {
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4vw;
+}
+#btn > button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2274e8;
+  color: white;
+  cursor: pointer;
+}
+
+#btn > button:hover {
+  background-color: #1a55a6;
+}
+/* -----------------------------Middle part----------------------------------- */
+#userInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5vw;
+}
+#userInfo > p > strong {
+  background-color: #2274e8;
+  height: 4vw;
+  /* color: white; */
+  font-weight: 500;
+  padding: 5px 10px;
+  width: fit-content;
+}
+#userInfo > p > span {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+#userInfo > p {
+  display: flex;
+  flex-direction: column;
+  border-right: 0.1px solid black;
+  border-bottom: 0.1px solid black;
+  /* border: 0.4px solid black; */
+}
+
+/* --------------------------------bottom button ------------------------ */
+.bottom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-btn > button {
+  padding: 5px 10px;
+  background-color: #2274e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2vw;
+}

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qualification details Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <img src="../image/1.gif" alt="">
+  </nav>
+
+  <header>
+    <p>Application Form for the Post of <br> Data Opreater</p>
+    <div class="dth">
+      <p>Welcome : <span>dil76676484@gmail.com</span></p>
+      <button>Home</button>
+    </div>
+  </header>
+
+  <div class="sec">
+    <div class="part1" onclick="btn1()">
+      <p>Click here to <br> Fill Personal Detail</p>
+    </div>
+    <div class="part1" style="background-color: #2274e8;">
+      <p>Click here to <br> Fill Qualification Details</p>
+    </div>
+
+    <div class="part1" onclick="btn1()">
+      <p>Click here to <br> Fill Experience Details (Optional)</p>
+    </div>
+
+    <div class="part1" onclick="btn1()">
+      <p>Click here to <br> Submit Qualification Undertaking</p>
+    </div>
+  </div>
+
+  <p class="text1">Qualification Criteria not matched. (Note: Division/ Percentage or <span>OTHER Degree</span>/ Main
+    Subject(s) not specified otherwise in the advertisement will be Rejected). Fill all the details of relevant <br>
+    Qualification (which makes your eligible) before proceeding... Kindly see the advertisement for detail.</p>
+
+
+
+  <div class="main">
+    <div class="elem">
+      <div class="inerelem" id="selectElem">
+        <label>Select Qualification Level :</label>
+        <select name="" id="qualificationSelect">
+          <option value="selectElem">-- Select Qualification --</option>
+          <option value="10th">10th/ Matriculation</option>
+          <option value="12th">12th/ Inter</option>
+          <option value="Graduation">Gradution.</option>
+        </select>
+      </div>
+      <div id="selectElem2">
+        <button onclick="showElem()">Add Qualification</button>
+      </div>
+    </div>
+
+    <!-- 10th Qualification Div Additional-div -->
+    <div id="add-elem1">
+      <h1>Add/Modify Qualification</h1>
+      <div class="box">
+        <div class="box-elem">
+          <label for=""><span>*</span> Qualification Level </label>
+          <div class="box-elem-r">
+            <p>10th/Matriculation</p>
+          </div>
+        </div>
+        <div class="box-elem">
+          <label for=""><span>*</span> Qualification/ Degree Name </label>
+          <div class="box-elem-r">
+            <input type="text" id="qualification" required>
+          </div>
+        </div>
+        <div class="box-elem">
+          <label for=""><span>*</span> Subject/ Specialization Name </label>
+          <div class="box-elem-r">
+            <input type="text" id="subject" required>
+          </div>
+        </div>
+        <div class="box-elem">
+          <label for=""><span>*</span> Passing Year </label>
+          <div class="box-elem-r">
+            <input type="date" id="passingYear" required style="width: fit-content;">
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Board/ University </label>
+          <div class="box-elem-r">
+            <input type="text" id="board">
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Marking Scheme </label>
+          <div class="box-elem-r">
+            <select name="" id="markingScheme" required>
+              <option value="">--Select--</option>
+              <option value="marks">Marks</option>
+              <option value="grades">Grades</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Marks/Grade obtained </label>
+          <div class="box-elem-r">
+            <input type="text" id="marksObtained" required>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Maximum Marks/Grades </label>
+          <div class="box-elem-r">
+            <input type="text" id="maxMarks" required>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Percentage </label>
+          <div class="box-elem-r">
+            <input type="text" id="percentage" required style="width: 10%;">
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Division </label>
+          <div class="box-elem-r">
+            <select name="" id="division" required>
+              <option value="">--Select--</option>
+              <option value="first">FIRST</option>
+              <option value="second">SECOND</option>
+              <option value="third">THIRD</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Delivery Mode </label>
+          <div class="box-elem-r">
+            <select name="" id="deliveryMode">
+              <option value="">--Select--</option>
+              <option value="fullTime">FULL TIME</option>
+              <option value="partTime">PART TIME</option>
+              <option value="corresponding">CORRESPONDING</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="btn">
+        <button onclick="save()">Save Qualification</button>
+        <button onclick="btnCancel()">Cancel</button>
+      </div>
+
+
+    </div>
+
+    <div id="add-elem2">
+      <h1>Add/Modify Qualification</h1>
+      <div class="box">
+        <div class="box-elem">
+          <label for=""><span>*</span> Qualification Level </label>
+          <div class="box-elem-r">
+            <p>10th/Matriculation</p>
+          </div>
+        </div>
+        <div class="box-elem">
+          <label for=""><span>*</span> Qualification/ Degree Name </label>
+          <div class="box-elem-r">
+            <input type="text" id="qualification" required>
+          </div>
+        </div>
+        <div class="box-elem">
+          <label for=""><span>*</span> Subject/ Specialization Name </label>
+          <div class="box-elem-r">
+            <input type="text" id="subject" required>
+          </div>
+        </div>
+        <div class="box-elem">
+          <label for=""><span>*</span> Passing Year </label>
+          <div class="box-elem-r">
+            <input type="date" id="passingYear" required style="width: fit-content;">
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Board/ University </label>
+          <div class="box-elem-r">
+            <input type="text" id="board">
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Marking Scheme </label>
+          <div class="box-elem-r">
+            <select name="" id="markingScheme" required>
+              <option value="">--Select--</option>
+              <option value="marks">Marks</option>
+              <option value="grades">Grades</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Marks/Grade obtained </label>
+          <div class="box-elem-r">
+            <input type="text" id="marksObtained" required>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Maximum Marks/Grades </label>
+          <div class="box-elem-r">
+            <input type="text" id="maxMarks" required>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Percentage </label>
+          <div class="box-elem-r">
+            <input type="text" id="percentage" required style="width: 10%;">
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Division </label>
+          <div class="box-elem-r">
+            <select name="" id="division" required>
+              <option value="">--Select--</option>
+              <option value="first">FIRST</option>
+              <option value="second">SECOND</option>
+              <option value="third">THIRD</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Delivery Mode </label>
+          <div class="box-elem-r">
+            <select name="" id="deliveryMode">
+              <option value="">--Select--</option>
+              <option value="fullTime">FULL TIME</option>
+              <option value="partTime">PART TIME</option>
+              <option value="corresponding">CORRESPONDING</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="btn">
+        <button onclick="save()">Save Qualification</button>
+        <button onclick="btnCancel()">Cancel</button>
+      </div>
+
+
+    </div>
+
+
+    <div id="add-elem3">
+      <h1>Add/Modify Qualification</h1>
+      <div class="box">
+        <div class="box-elem">
+          <label for=""><span>*</span> Qualification Level </label>
+          <div class="box-elem-r">
+            <p>10th/Matriculation</p>
+          </div>
+        </div>
+        <div class="box-elem">
+          <label for=""><span>*</span> Qualification/ Degree Name </label>
+          <div class="box-elem-r">
+            <input type="text" id="qualification" required>
+          </div>
+        </div>
+        <div class="box-elem">
+          <label for=""><span>*</span> Subject/ Specialization Name </label>
+          <div class="box-elem-r">
+            <input type="text" id="subject" required>
+          </div>
+        </div>
+        <div class="box-elem">
+          <label for=""><span>*</span> Passing Year </label>
+          <div class="box-elem-r">
+            <input type="date" id="passingYear" required style="width: fit-content;">
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Board/ University </label>
+          <div class="box-elem-r">
+            <input type="text" id="board">
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Marking Scheme </label>
+          <div class="box-elem-r">
+            <select name="" id="markingScheme" required>
+              <option value="">--Select--</option>
+              <option value="marks">Marks</option>
+              <option value="grades">Grades</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Marks/Grade obtained </label>
+          <div class="box-elem-r">
+            <input type="text" id="marksObtained" required>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Maximum Marks/Grades </label>
+          <div class="box-elem-r">
+            <input type="text" id="maxMarks" required>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Percentage </label>
+          <div class="box-elem-r">
+            <input type="text" id="percentage" required style="width: 10%;">
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Division </label>
+          <div class="box-elem-r">
+            <select name="" id="division" required>
+              <option value="">--Select--</option>
+              <option value="first">FIRST</option>
+              <option value="second">SECOND</option>
+              <option value="third">THIRD</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="box-elem">
+          <label for=""><span>*</span> Delivery Mode </label>
+          <div class="box-elem-r">
+            <select name="" id="deliveryMode">
+              <option value="">--Select--</option>
+              <option value="fullTime">FULL TIME</option>
+              <option value="partTime">PART TIME</option>
+              <option value="corresponding">CORRESPONDING</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="btn">
+        <button onclick="save()">Save Qualification</button>
+        <button onclick="btnCancel()">Cancel</button>
+      </div>
+
+
+    </div>
+
+    <!-- --------------------------Middle Part ----------------------- -->
+    <!-- <div id="userInfo">
+
+      <P> <strong>Delete</strong> <span>Delete</span></P>
+      <p> <strong>SrNo.</strong> <span> 1 </span></p>
+      <p> <strong>Qualification Level</strong> <span>10th/Matriculation</span></p>
+      <P> <strong>Qualification Name</strong> <span></span></P>
+      <P> <strong>Subject Name</strong> <span></span></P>
+      <P> <strong>Passing Year</strong> <span></span></P>
+      <P> <strong>Board/ University</strong> <span></span></P>
+      <P> <strong>Marking Scheme</strong> <span></span></P>
+      <P> <strong>Marks/Grade obtained</strong> <span></span></P>
+      <P> <strong>Maximum Marks/Grades</strong> <span></span></P>
+      <P> <strong>Division</strong> <span></span> </P>
+      <p> <strong>Delivery Mode</strong> <span></span></p>
+
+    </div> -->
+
+
+    <table id="dataTable" border="1">
+      <thead>
+        <tr>
+          <th>Serial No.</th>
+          <th>Qualification</th>
+          <th>Subject Name</th>
+          <th>Passing Year</th>
+          <th>Board/University</th>
+          <th>Marking Scheme</th>
+          <th>Marks/Grade Obtained</th>
+          <th>Maximum Marks/Grade</th>
+          <th>Percentage</th>
+          <th>Division</th>
+          <th>Delivery Mode</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <!-- bottom Button (Validate Qualification and Proceed to Next Step) -->
+
+
+    <div class="bottom-btn">
+      <button>Validate Qualification and Proceed to Next Step</button>
+    </div>
+
+
+  </div>
+
+
+
+
+  <script>
+    function save() {
+      // event.preventDefault();  // Prevent form submission
+      document.getElementById("add-elem1").style.display = "none";
+      document.getElementById("add-elem2").style.display = "none";
+      document.getElementById("add-elem3").style.display = "none";
+      document.getElementById("selectElem").style.display = "block";
+      document.getElementById("selectElem2").style.display = "block";
+
+
+      // Collect form data
+      let qualification = document.getElementById('qualification').value;
+      let subject = document.getElementById('subject').value;
+      let passingYear = document.getElementById('passingYear').value;
+      let board = document.getElementById('board').value;
+      let markingScheme = document.getElementById('markingScheme').value;
+      let marksObtained = document.getElementById('marksObtained').value;
+      let maxMarks = document.getElementById('maxMarks').value;
+      let percentage = document.getElementById('percentage').value;
+      let division = document.getElementById('division').value;
+      let deliveryMode = document.getElementById('deliveryMode').value;
+
+      // Create a new row in the table
+      let table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+      let newRow = table.insertRow(table.rows.length);
+
+      // Insert data into the row
+      newRow.insertCell(0).textContent = table.rows.length;  // Serial No.
+      newRow.insertCell(1).textContent = qualification;
+      newRow.insertCell(2).textContent = subject;
+      newRow.insertCell(3).textContent = passingYear;
+      newRow.insertCell(4).textContent = board;
+      newRow.insertCell(5).textContent = markingScheme;
+      newRow.insertCell(6).textContent = marksObtained;
+      newRow.insertCell(7).textContent = maxMarks;
+      newRow.insertCell(8).textContent = percentage;
+      newRow.insertCell(9).textContent = division;
+      newRow.insertCell(10).textContent = deliveryMode;
+
+      // Create delete button and append to the row
+      let deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.addEventListener('click', function () {
+        table.deleteRow(newRow.rowIndex - 1);
+        updateSerialNumbers();  // Update serial numbers after deletion
+      });
+      newRow.insertCell(11).appendChild(deleteButton);
+
+      // Reset form fields
+      document.getElementById('qualificationForm').reset();
+    };
+
+    // Function to update serial numbers after a row is deleted
+    function updateSerialNumbers() {
+      let table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+      for (let i = 0; i < table.rows.length; i++) {
+        table.rows[i].cells[0].textContent = i + 1;  // Update serial number
+      }
+    }
+
+    function btn1() {
+      alert("Please Countinue this page")
+    }
+    function showElem() {
+      let selectOption = document.getElementById("qualificationSelect").value;
+      document.getElementById("add-elem1").style.display = "none";
+      document.getElementById("add-elem2").style.display = "none";
+      document.getElementById("add-elem3").style.display = "none";
+      document.getElementById("selectElem").style.display = "none";
+      document.getElementById("selectElem2").style.display = "none";
+
+      if (selectOption === "10th") {
+        document.getElementById("add-elem1").style.display = "block";
+      } else if (selectOption === "12th") {
+        document.getElementById("add-elem2").style.display = "block";
+      } else if (selectOption === "Graduation") {
+        document.getElementById("add-elem3").style.display = "block";
+      } else if (selectOption === "selectElem") {
+        document.getElementById("selectElem").style.display = "block";
+        document.getElementById("selectElem2").style.display = "block";
+      }
+    }
+    function btnCancel() {
+      document.getElementById("add-elem3").style.display = "none";
+      document.getElementById("add-elem2").style.display = "none";
+      document.getElementById("add-elem1").style.display = "none";
+      document.getElementById("selectElem").style.display = "block";
+      document.getElementById("selectElem2").style.display = "block";
+    }
+
+
+  </script>
+</body>
+
+</html>
